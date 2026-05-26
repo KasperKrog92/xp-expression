@@ -39,7 +39,7 @@ Hold strukturen enkel. Tilføj kun mapper som `assets/` eller `images/`, når de
 - Brug eksisterende CSS-variabler i `:root`, før du introducerer nye farver.
 - Sitet skal være responsivt og må ikke have horisontal overflow på mobil.
 - Hold sektionerne tydelige og luftige.
-- Galleri-sektionen viser udvalgte YouTube-videoer som thumbnail-kort, der linker til YouTube. Brug stabile `watch?v=VIDEO_ID`-links og `i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg` til thumbnails.
+- Galleri-sektionen viser udvalgte YouTube-videoer som thumbnail-kort, der bliver til en embedded YouTube-afspiller ved klik. Brug stabile `watch?v=VIDEO_ID`-links, `data-video-id`, `data-video-title` og `i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg` til thumbnails.
 - Videoer i galleriet skal ligge nyeste først. Den aktuelle rækkefølge er:
   1. `quwqDIEkJDQ` - I Will Not Give Up // Dance 3 - 7. maj 2026
   2. `wt9O6r8UMqA` - I Will Not Give Up // Dance 2 - 7. maj 2026

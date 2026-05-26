@@ -34,18 +34,32 @@
           <a href="#kontakt">Kontakt</a>
         </div>
         <a class="nav-cta" href="#kontakt">Skriv til Josva <span aria-hidden="true">→</span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-nav-toggle>
+          <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span></span>
+          <span>Menu</span>
+        </button>
+      </div>
+      <div class="nav-mobile" id="mobile-menu" data-mobile-nav hidden>
+        <a href="#visionen">Visionen</a>
+        <a href="#hvad-vi-goer">Hvad vi gør</a>
+        <a href="#priser">Priser</a>
+        <a href="#galleri">Galleri</a>
+        <a href="#kontakt">Kontakt</a>
       </div>
     </nav>
 
     <header class="hero" id="top">
       <div class="hero-grid">
-        <div>
+        <div class="hero-title">
           <p class="eyebrow mono">Kristen gadedans · under opbygning · Danmark</p>
           <h1 class="display">
             <span>Dans.</span>
             <span class="coral italic">Gade.</span>
             <span class="indent">Tro.</span>
           </h1>
+        </div>
+
+        <div class="hero-panel">
           <p class="hero-copy">
             XP Expression er en kristen streetdance-gruppe under opbygning, hvor bevægelse,
             fællesskab og evangeliet mødes på gaden. Vi drømmer om at skabe levende shows,
@@ -55,12 +69,6 @@
             <a class="btn btn-primary" href="#kontakt">Book en samtale <span aria-hidden="true">→</span></a>
             <a class="btn btn-ghost" href="#hvad-vi-goer">Se hvad vi gør <span aria-hidden="true">→</span></a>
           </div>
-        </div>
-
-        <div class="hero-visual" aria-label="Grafisk pladsholder til dansefoto">
-          <span class="corner mono"><span class="dot"></span>I gang · 2026</span>
-          <span class="chi" aria-hidden="true">XP</span>
-          <span class="visual-caption mono">[ foto: dans i bevægelse · 4:5 ]</span>
         </div>
       </div>
     </header>
@@ -120,8 +128,11 @@
                 optræden ad gangen.
               </p>
               <div class="signature">
-                <strong>Josva Daugaard Krog</strong>
-                <span>Grundlægger · XP Expression</span>
+                <img src="assets/josva.png" alt="Josva Daugaard Krog" loading="lazy" />
+                <div>
+                  <strong>Josva Daugaard Krog</strong>
+                  <span>Grundlægger · XP Expression</span>
+                </div>
               </div>
             </div>
           </div>
@@ -263,7 +274,7 @@
 
           <div class="video-gallery">
             <article class="video-card featured-video">
-              <a class="video-link" href="https://www.youtube.com/watch?v=quwqDIEkJDQ" target="_blank" rel="noopener" aria-label="Se I Will Not Give Up // Dance 3 på YouTube">
+              <a class="video-link" href="https://www.youtube.com/watch?v=quwqDIEkJDQ" target="_blank" rel="noopener" data-video-id="quwqDIEkJDQ" data-video-title="I Will Not Give Up // Dance 3" aria-label="Afspil I Will Not Give Up // Dance 3 på siden">
                 <img src="https://i.ytimg.com/vi/quwqDIEkJDQ/hqdefault.jpg" alt="I Will Not Give Up // Dance 3" loading="lazy" />
                 <span>Se video</span>
               </a>
@@ -274,7 +285,7 @@
             </article>
 
             <article class="video-card">
-              <a class="video-link" href="https://www.youtube.com/watch?v=wt9O6r8UMqA" target="_blank" rel="noopener" aria-label="Se I Will Not Give Up // Dance 2 på YouTube">
+              <a class="video-link" href="https://www.youtube.com/watch?v=wt9O6r8UMqA" target="_blank" rel="noopener" data-video-id="wt9O6r8UMqA" data-video-title="I Will Not Give Up // Dance 2" aria-label="Afspil I Will Not Give Up // Dance 2 på siden">
                 <img src="https://i.ytimg.com/vi/wt9O6r8UMqA/hqdefault.jpg" alt="I Will Not Give Up // Dance 2" loading="lazy" />
                 <span>Se video</span>
               </a>
@@ -285,7 +296,7 @@
             </article>
 
             <article class="video-card">
-              <a class="video-link" href="https://www.youtube.com/watch?v=7_GNF82x2nY" target="_blank" rel="noopener" aria-label="Se I Will Not Give Up // Dance 1 på YouTube">
+              <a class="video-link" href="https://www.youtube.com/watch?v=7_GNF82x2nY" target="_blank" rel="noopener" data-video-id="7_GNF82x2nY" data-video-title="I Will Not Give Up // Dance 1" aria-label="Afspil I Will Not Give Up // Dance 1 på siden">
                 <img src="https://i.ytimg.com/vi/7_GNF82x2nY/hqdefault.jpg" alt="I Will Not Give Up // Dance 1" loading="lazy" />
                 <span>Se video</span>
               </a>
@@ -296,7 +307,7 @@
             </article>
 
             <article class="video-card">
-              <a class="video-link" href="https://www.youtube.com/watch?v=ZyuXh3qyyGE" target="_blank" rel="noopener" aria-label="Se You Are Holy // Flag Dance på YouTube">
+              <a class="video-link" href="https://www.youtube.com/watch?v=ZyuXh3qyyGE" target="_blank" rel="noopener" data-video-id="ZyuXh3qyyGE" data-video-title="You Are Holy // Flag Dance" aria-label="Afspil You Are Holy // Flag Dance på siden">
                 <img src="https://i.ytimg.com/vi/ZyuXh3qyyGE/hqdefault.jpg" alt="You Are Holy // Flag Dance" loading="lazy" />
                 <span>Se video</span>
               </a>
@@ -307,7 +318,7 @@
             </article>
 
             <article class="video-card">
-              <a class="video-link" href="https://www.youtube.com/watch?v=1Wr8yJfKu-s" target="_blank" rel="noopener" aria-label="Se Shallow Water // Dance på YouTube">
+              <a class="video-link" href="https://www.youtube.com/watch?v=1Wr8yJfKu-s" target="_blank" rel="noopener" data-video-id="1Wr8yJfKu-s" data-video-title="Shallow Water // Dance" aria-label="Afspil Shallow Water // Dance på siden">
                 <img src="https://i.ytimg.com/vi/1Wr8yJfKu-s/hqdefault.jpg" alt="Shallow Water // Dance" loading="lazy" />
                 <span>Se video</span>
               </a>
@@ -385,7 +396,7 @@
                 </div>
                 <div>
                   <dt>Base</dt>
-                  <dd>Danmark</dd>
+                  <dd>Randers, Danmark</dd>
                 </div>
                 <div>
                   <dt>Sociale</dt>
