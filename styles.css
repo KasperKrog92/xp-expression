@@ -529,9 +529,13 @@ section {
 }
 
 .offer li::before {
-  content: "☧";
+  content: "XP";
   margin-right: 10px;
   color: var(--coral);
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
 }
 
 .prices {
@@ -643,74 +647,81 @@ section {
   color: var(--ink-faint);
 }
 
-.gallery {
+.video-gallery {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 120px;
-  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
 
-.gallery-tile {
-  position: relative;
-  display: grid;
-  place-items: end;
+.video-card {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 12px;
-  background:
-    repeating-linear-gradient(135deg, rgba(20, 16, 10, 0.05) 0 12px, transparent 12px 24px),
-    linear-gradient(180deg, var(--paper-3), var(--paper-2));
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: var(--paper);
 }
 
-.gallery-tile.large {
-  grid-column: span 3;
-  grid-row: span 3;
+.video-card.featured-video {
+  grid-column: span 2;
 }
 
-.gallery-tile.video {
-  grid-column: span 3;
-  grid-row: span 2;
+.video-link {
+  position: relative;
   display: block;
-  padding: 0;
-  border-color: var(--coral);
+  overflow: hidden;
   background: var(--ink);
 }
 
-.gallery-tile.wide {
-  grid-column: span 3;
-  grid-row: span 2;
-}
-
-.gallery-tile:not(.large, .video, .wide) {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.gallery-tile span {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  color: var(--ink-faint);
-  font-family: "Bricolage Grotesque", sans-serif;
-  font-size: 42px;
-  font-style: italic;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  opacity: 0.45;
-}
-
-.gallery-tile p {
-  margin: 0;
-  color: var(--ink-faint);
-}
-
-.gallery iframe {
+.video-link img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 16 / 9;
   display: block;
-  border: 0;
+  object-fit: cover;
+  opacity: 0.9;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.video-link span {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: var(--coral);
+  color: var(--paper);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.video-link span::after {
+  content: "→";
+}
+
+.video-link:hover img {
+  opacity: 1;
+  transform: scale(1.025);
+}
+
+.video-card div {
+  padding: 18px 20px 20px;
+}
+
+.video-card p {
+  margin: 0 0 8px;
+  color: var(--ink-faint);
+}
+
+.video-card h3 {
+  margin: 0;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(22px, 2.1vw, 30px);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
 }
 
 .youtube-link a {
@@ -851,8 +862,8 @@ footer h4 {
   margin: 0 0 16px;
 }
 
-footer a,
-footer span {
+.foot > div:not(:first-child) a,
+.foot > div:not(:first-child) span {
   display: block;
   margin-bottom: 8px;
   color: var(--ink-dim);
@@ -898,23 +909,12 @@ footer span {
     grid-template-columns: 1fr;
   }
 
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 160px;
+  .video-gallery {
+    grid-template-columns: 1fr;
   }
 
-  .gallery-tile,
-  .gallery-tile.large,
-  .gallery-tile.video,
-  .gallery-tile.wide,
-  .gallery-tile:not(.large, .video, .wide) {
+  .video-card.featured-video {
     grid-column: span 1;
-    grid-row: span 1;
-  }
-
-  .gallery-tile.video {
-    grid-column: span 2;
-    grid-row: span 2;
   }
 }
 

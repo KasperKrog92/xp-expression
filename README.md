@@ -2,6 +2,8 @@
 
 Dansk enkeltsideswebsite for XP Expression, en kristen gadedansgruppe ledet af Josva Daugaard Krog.
 
+`XP` bruges som en moderne udgave af chi-rho-symbolet: et enkelt kristent mærke, der peger på Kristus i et nutidigt streetdance-udtryk.
+
 ## Struktur
 
 - `index.html` - markup og dansk indhold
@@ -25,5 +27,5 @@ Sitet er helt statisk og kan udgives direkte på GitHub Pages, Netlify, Vercel e
 ## Noter til overlevering
 
 - Kontaktformularen har endnu ingen backend eller formularservice.
-- Udskift galleri-pladsholderne med rigtige fotos, når de er klar.
-- YouTube-området bruger kanalens uploads-playlist og linker til `https://www.youtube.com/@xp-expressiondance224/videos`.
+- Galleri-sektionen viser fem udvalgte YouTube-videoer fra XP-Expression DANCE.
+- Siden linker fortsat til `https://www.youtube.com/@xp-expressiondance224/videos`.
